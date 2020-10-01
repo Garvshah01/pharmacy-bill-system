@@ -1,25 +1,18 @@
 #include <iostream>
 #include <stdlib.h>
-#include <cstdlib>
 #include <string>
-#include <ctime>
-#include <cmath>
-#include <cstdio>
-#include <fstream>
-#include <iomanip>
 #include <vector>
 #define max 10
 
 using namespace std;
 //the header file
 
-class medicineType	//base class
+class medicineType
 {
 public:
 
     void take_order();//to  take_order
     void delete_order(); //to delete the order
-    //void modify(); //to modify the order
     void order_list(); //to display the order_list
     //void daily_summary(); //to display daily_summary
     void exit();  //function to exit system
@@ -30,7 +23,7 @@ public:
 medicineType::medicineType ()
 {
 
-}		//constructor for class CarType
+}
 
 void print_reciept(struct node *temp2);
 void store_order(struct node *temp3);
@@ -47,8 +40,7 @@ struct node //constract node
     string medicine_name[10];
     double total_price;
 
-}*q, *temp;				//pointer declaration
-
+}*q, *temp;				
 
 int main()	// Main function
 {
@@ -63,9 +55,7 @@ int main()	// Main function
         cout<<"\t\t--------------------------------------------------\n";
         cout<<"\t\t||\t1. Take new Medicine order \t\t ||\n";
         cout<<"\t\t||\t2. Delete Any Medicine order\t\t ||\n";
-        // cout<<"\t\t||\t3. Modify Order List \t\t\t ||\n";
         cout<<"\t\t||\t3. Print the Reciept and Total Payment \t ||\n";
-        // cout<<"\t\t||\t5. Daily Summary of total Sale \t\t ||\n";
         cout<<"\t\t||\t4. Exit\t\t\t\t\t ||\n";
         cout<<"\t\t--------------------------------------------------\n";
         cout<<"Enter choice: ";
@@ -89,23 +79,11 @@ int main()	// Main function
                 system("PAUSE");
             }	//end case 2
 
-                /*   case 3:  // NOT used
-                   {
-                       medicine.modify();	//function modify
-                       break;
-                   }	//end case 3 */
-
             case 3:    //done
             {
                 medicine.order_list();	//function order
                 break;
             }	//end case 4
-                /*case 5:             //NOT used
-               {
-                   medicine.daily_summary();	//function daily_summary
-                   system("PAUSE");
-                   break;
-               }	//end case 5   */
             case 4:   //done
             {
                 medicine.exit();	//function exit
@@ -436,72 +414,7 @@ void medicineType::take_order()		//function to take_order
 
 
 
-/*void read_order()
-{
 
-    // File pointer
-    fstream fin;
-
-    // Open an existing file
-    fin.open("medicine_detail.csv", ios::in);
-
-    // Get the roll number
-    // of which the data is required
-    string medicine_name1,med_name1;
-    int count = 0,price,total_price,quantity;
-    cout << "Enter the medicine name in Capital letters:  ";
-    cin >> medicine_name1>>endl;
-
-    // Read the Data from the file
-    // as String Vector
-    vector<string> row;
-    string line, word, temp1;
-
-    while (fin >> temp1) {
-
-        row.clear();
-
-        // read an entire row and
-        // store it in a string variable 'line'
-        getline(fin, line);
-
-        // used for breaking words
-        stringstream s(line);
-
-        // read every column data of a row and
-        // store it in a string variable, 'word'
-        while (getline(s, word, ',')) {
-
-            // add all the column data
-            // of a row to a vector
-            row.push_back(word);
-        }
-        med_name1 = row[0];
-        // convert string to integer for comparision
-        //roll2 = stoi(row[0]);
-
-        // Compare the roll number
-        if (medicine_name1 == med_name1) {
-            // store medicine name
-            temp->medicine_name[i] = medicine_name1;
-            // Print the found data
-            count = 1;
-            //cout << row[0] << "    ";
-            cout << "Quantity : ";
-            cin >> quantity;
-            cout << "\n";
-            temp->quantity[i] = quantity;
-            cout << row[1] << "*" << quantity;
-            price = stoi(row[1]);
-            temp->price[i] = price*quantity
-            total_price = total_price + price*quantity;
-            //to reduce the quantity use function void unit(row[0]);
-            break;
-        }
-        temp->total = total_price;
-    }
-    if (count == 0)
-        cout << "Record not found\n";*/
 
 
 
