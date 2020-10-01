@@ -172,16 +172,12 @@ void medicineType::take_order()		//function to take_order
                     row.push_back(word);
                 }
                 med_name1 = row[0];
-                // convert string to integer for comparision
-                //roll2 = stoi(row[0]);
 
-                // Compare the roll number
                 if (medicine_name1 == med_name1) {
                     // store medicine name
                     temp->medicine_name[i] = medicine_name1;
                     // Print the found data
                     count = 1;
-                    //cout << row[0] << "    ";
                     cout << "Quantity : ";
                     cin >> quantity;
                     cout << "\n";
