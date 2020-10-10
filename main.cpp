@@ -14,7 +14,7 @@ public:
     void take_order();
     void delete_order(); 
     void order_list();
- void daily_summary(); 
+ //void daily_summary(); 
     void exit(); 
     medicineType();
 
