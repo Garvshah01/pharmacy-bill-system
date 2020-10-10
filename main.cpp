@@ -11,12 +11,12 @@ class medicineType
 {
 public:
 
-    void take_order();//to  take_order
-    void delete_order(); //to delete the order
-    void order_list(); //to display the order_list
-    //void daily_summary(); //to display daily_summary
-    void exit();  //function to exit system
-    medicineType();//constuctor
+    void take_order();
+    void delete_order(); 
+    void order_list();
+ void daily_summary(); 
+    void exit(); 
+    medicineType();
 
 };
 
